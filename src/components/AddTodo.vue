@@ -8,7 +8,7 @@
 </template>
 
 <script>
-// import uuid from 'uuid';
+import { v4 } from 'uuid';
 export default {
   name: "AddTodo",
   data() {
@@ -19,6 +19,7 @@ export default {
   methods: {
     addTodo() {
       const newTodo = {
+        id: v4(),
         title: this.title,
         completed: false
       }
